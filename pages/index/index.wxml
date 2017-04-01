@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="container">
+  <scroll-view scroll-y="true">
+    <view wx:for="{{posts}}" wx:for-index="ID" wx:for-item="post" class="usermotto">
+      <!--<template is="wxParse" class="wxParse" data="{{wxParseData:article.nodes}}"/>-->
+      <view>
+        <navigator url="../post/index?id={{post.id}}" hover-class="navigator-hover">{{post.title.rendered}}</navigator>
+      </view>
+      <view>{{post.excerpt.rendered}}</view>
+    </view>
+  </scroll-view>
+  <button type="primary" bindtap="loadmore">加载更多</button>
+</view>

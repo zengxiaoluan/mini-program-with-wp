@@ -1,0 +1,4 @@
+<view class="container">
+    <view>{{post.title.rendered}}</view>
+    <view>{{post.content.rendered}}</view>
+</view>

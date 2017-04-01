@@ -1,0 +1,7 @@
+/**index.wxss**/
+view{
+  margin-bottom: 20px;
+}
+button{
+  width: 100%;
+}
