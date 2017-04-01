@@ -1,7 +1,21 @@
 /**index.wxss**/
+.container{
+  background-color: #eee;
+}
 view{
   margin-bottom: 20px;
 }
-button{
+button,image{
+  width: 100%;
+}
+.post{
+  background-color: white;
+}
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: '微软雅黑'
+}
+navigator{
   width: 100%;
 }

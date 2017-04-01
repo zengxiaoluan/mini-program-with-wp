@@ -1,4 +1,5 @@
 <view class="container">
     <view>{{post.title.rendered}}</view>
+    <image mode="widthFix" src="{{post.better_featured_image.source_url}}"></image>
     <view>{{post.content.rendered}}</view>
 </view>
