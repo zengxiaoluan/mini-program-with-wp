@@ -1,13 +1,14 @@
 <!--index.wxml-->
-<import src="../../wxParse/wxParse.wxml"/> 
 <view class="container">
-  <view class="head">test</view>
-    <view wx:for="{{posts}}" wx:for-index="ID" wx:for-item="post" class="post">
-      <!--<template is="wxParse" class="wxParse" data="{{wxParseData:article.nodes}}"/>-->
+    <view wx:for="{{posts}}" wx:key="ID" wx:for-index="ID" wx:for-item="post" class="post">
         <navigator url="../post/index?id={{post.id}}" hover-class="navigator-hover">
-          <view class="title">{{post.title.rendered}}</view>
-          <image mode="aspectFill" src="{{post.better_featured_image.source_url}}"></image>
-          <view>{{post.excerpt.rendered}}</view>
+
+          <rich-text  class="title" nodes="{{post.title.rendered}}" bindtap="tap"></rich-text>
+
+          <image mode="aspectFill" src="{{post.better_featured_image.source_url || defaultImg}}"></image>
+
+          <rich-text class='excerpt' nodes="{{post.excerpt.rendered}}" bindtap="tap"></rich-text>
+
         </navigator>
     </view>
   <button type="primary" bindtap="loadmore">加载更多</button>

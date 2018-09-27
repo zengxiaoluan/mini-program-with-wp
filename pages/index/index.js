@@ -1,5 +1,4 @@
 //index.js
-var WxParse = require('../../wxParse/wxParse.js');
 //获取应用实例
 var app = getApp()
 Page({
@@ -7,8 +6,9 @@ Page({
     posts: [],
     userInfo: {},
     pageIndex: 1,
+    defaultImg: 'https://zengxiaoluan.com/wp-content/uploads/2016/10/logo.jpg',
     wpApiSettings : {
-      url:'https://welinkcredit.com',
+      url: 'https://zengxiaoluan.com',
     }
   },
   //事件处理函数
@@ -21,11 +21,11 @@ Page({
     
     var that = this;
     wx.request( {
-      url: that.data.wpApiSettings.url + '/wp-json/wp/v2/posts',
+      url: that.data.wpApiSettings.url + '/wp-json/wp/v2/posts?_embed',
       method: 'GET',
       dataType: 'json',
       complete: function( data ){
-        // console.log( data )
+        // console.log(data)
       },
       success: function( data ){
         if( data.statusCode != 200 ){
@@ -43,12 +43,14 @@ Page({
         that.setData({
           posts: data.data
         })
-        // WxParse.wxParse('article', 'html', data.data.content.rendered, that, 5);   
       },
     });
   },
   bindscrolltolower: function( e ){
     console.log(e)
+  },
+  onPullDownRefresh () {
+
   },
   loadmore: function(){
     // console.log('eee')

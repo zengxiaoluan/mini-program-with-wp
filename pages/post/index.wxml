@@ -1,5 +1,5 @@
 <view class="container">
     <view>{{post.title.rendered}}</view>
     <image mode="widthFix" src="{{post.better_featured_image.source_url}}"></image>
-    <view>{{post.content.rendered}}</view>
+    <rich-text nodes="{{post.content.rendered}}" bindtap="tap"></rich-text>
 </view>

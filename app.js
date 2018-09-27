@@ -7,6 +7,7 @@ App({
     wx.setStorageSync('logs', logs)
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    host: 'https://zengxiaoluan.com'
   }
 })

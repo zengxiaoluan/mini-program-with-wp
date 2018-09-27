@@ -5,7 +5,7 @@ Page({
     },
     onLoad: function ( options ) {
         var wpApiSettings = {
-            url:'https://welinkcredit.com',
+            url:'https://zengxiaoluan.com',
         }
         var that = this;
         wx.request( {

@@ -1,21 +1,32 @@
 /**index.wxss**/
-.container{
-  background-color: #eee;
-}
-view{
-  margin-bottom: 20px;
-}
 button,image{
   width: 100%;
+  display: block;
+  margin: 10rpx auto;
 }
+
 .post{
-  background-color: white;
+  width: 96%;
+  padding: 10rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #eee;
+  background: white;
 }
+
 .title{
   font-size: 18px;
   font-weight: bold;
-  font-family: '微软雅黑'
+  font-family: '微软雅黑';
+  margin: 20rpx 0;
 }
+
+.excerpt {
+  color: #333;
+  letter-spacing: 1px;
+}
+
 navigator{
   width: 100%;
 }

@@ -2,29 +2,27 @@
   "pages":[
     "pages/index/index",
     "pages/post/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/title/title"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "文沥名家",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "曾小乱",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
-    "color": "#dddddd",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [{
-      "pagePath": "page/index/index",
-      "iconPath": "image/icon_component.png",
-      "selectedIconPath": "image/icon_component_HL.png",
-      "text": "组件"
-    }, {
-      "pagePath": "page/index/index",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "接口"
-    }]
+    "selectedColor": "#d5c019",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "摘要模式"
+      },
+      {
+        "pagePath": "pages/title/title",
+        "text": "标题模式"
+      }
+    ]
   }
 }
